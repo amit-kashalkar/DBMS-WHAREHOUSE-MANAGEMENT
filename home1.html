@@ -2,54 +2,43 @@
 <html><head>
 <title>home</title>
 <style>
-body{   background-color: rgb(253, 255, 148) }
-.card{    width:10%;
-          color:white;
-          height:15%; 
-          background-color: #4caf50;
-          box-shadow: 0px 5px 5px 0px  rgb(3, 105, 7);
-          margin:10px;
-          padding: 10px;
-          border-radius: 9px;
-          text-align: center;
-          transition: all 1s;
-       }
-       .card:hover{
-           transform: scale(1.1);
-           color:rgb(12, 219, 209);
-       }
+body{   background-color: rgb(250, 220, 216) }
        .container {
            margin-top:20%;
            display:flex;
            flex-wrap: wrap;
            justify-content: center
-       }
-       a{  color:white;       text-decoration:none;       }
-       a:hover {   color:rgb(12, 219, 209);      }
-       button{
-        width:10%;
-          color:white;
-          height:25%; 
-          background-color: #4caf50;
-          box-shadow: 0px 5px 5px 0px  rgb(3, 105, 7);
-          margin:10px;
-          padding: 10px;
-          border-radius: 9px;
-          text-align: center;
-          transition: all 1s;
-       }
-       button:hover{
-           transform: scale(1.1);
-           color:rgb(12, 219, 209);
-       }
+       }   
+  button {
+    background-color: white;
+    color: #442C2e;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1;
+    border-color: #442C2e;
+    border-radius: 24px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    cursor: pointer;
+    width: 10%;
+    height:25%; 
+    transition: all 1s;
+    box-shadow: 0px 5px 5px 0px #502C2e;
+    margin:10px;
+  }
+    button:hover{ background-color:#502C2e;
+    transform:scale(1.1); 
+  color:white;}
        </style>
     </head>
     <body>
         <div class="container">
-        <button onclick="window.location.href='/rouCust' "><h3>Customer Check-In</h3></a></button>
+         <button onclick="window.location.href='/rouCust' "><h3>Customer Check-In</h3></a></button>
         <button onclick="window.location.href='/rouSupplier' "><h3>Supplier Check-In</h3></a></button>
-        <button onclick="window.location.href='/rouInventory' "><h3 style="padding: 10px">Inventory<br></h3></a></button>
-        <button onclick="window.location.href='/rouStats' "><h3 style="padding: 10px">Statics</h3></a></button>
+        <button onclick="window.location.href='/rouInventory'"><h3 style="padding: 10px">Inventory<br></h3></button>
+        <button onclick="window.location.href='/rouStats'"><h3 style="padding:10px">Records</h3></button>
     </div>
     </body>
 </html>
