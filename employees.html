@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>STATS-Profit</title>
+        <title>EMPLOYYEE</title>
         <link rel="stylesheet" href="../forms.css">
         <link rel="stylesheet" href="../table.css">
         <link rel="stylesheet" href="../navig.css">
         <style>
-        body{   background-color: rgb(253, 255, 148)      }
+        body{   background-color: white  } 
+        
+        ul {
+    background-color:#442C2E;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    writing-mode: horizontal-lr;
+     }
+     li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+transition: all 1s;
+}
+button {
+  background-color: white;
+  color: #442C2e;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1;
+  border-color: #442C2e;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 60%;
+  transition: all 1s;
+}
+.button1{
+  background-color:  rgb(124, 68, 71);
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  float:right;
+  border: 1;
+  border-color:  rgb(124, 68, 71);
+  border-radius: 5%;
+  
+  cursor: pointer;
+  width: 110px;
+  transition: all 1s;
+  margin-bottom: 10px;
+}
+
+.button1:hover{ background-color:white;
+  border-color: #502C2e;
+  transform:scale(1.1); 
+color:#502C2e;}
+
+button:hover{ background-color:#502C2e;
+  transform:scale(1.1); 
+color:white;}
+li a:hover {
+background-color:#502C2e;
+transform: scale(1.1);
+}
+li b{
+        display: block;
+        color: white;
+        font-size: 130%;
+        text-align: center;
+        padding: 14px 16px;
+      }
+       
+/*table.center { margin-left:auto; margin-right:auto; } */
+table { width: 1250px; align-content: center; margin-left:auto; margin-right:auto; border: 1; color: #502C2e;}
+    th { padding: 7px 10px 10px 10px;}
+    td { padding: 2px 10px;}
+    th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 95%;
+    border-bottom: 2px solid #111111;
+    border-top: 1px solid #999;
+    text-align: left;
+    font-weight: bolder;
+    }
+    tr.even {
+    background-color: #efefef;
+    border-bottom: 2px solid #111111;}
+    div ,table{   float: center;  }
     </style>
     </head>
     <body>
             <ul>    
-                    <li style="float:right;"><a href="home.html" style="color:red">back</a></li>           
-                <li style="float:right"><a href="sales.html">Sales</a></li>
-                <li style="float:right"><a href="customerDetails.html">Customer</a></li>
-                <li style="float:right"><a href="supplierDetails.html">Suppliers</a></li>
-                <li style="float:right"><a href="stats.html">Income</a></li>
+
+              <li style="float:right; " onclick="window.location.href='/homepg'"><a style="color:white">home</a></li>              
+              <li style="float:right" onclick="window.location.href='/sales'"><a >Sales</a></li>
+                <li style="float:right" onclick="window.location.href='/customer'"><a >Customer</a></li>
+                <li style="float:right" onclick="window.location.href='/suppliers'"><a>Suppliers</a></li>
+                <li style="float:right" onclick="window.location.href='/rouStats'"><a >Income</a></li>
                 <li style="float:left"><b>Employees</b></li>
             </ul>
             <br><hr><br>
-        <div><table>
+            <button onclick="window.location.href='/addEmpF'" class="button1" >Add Employee</button>   
+       
+            <table >
             <tr>
               <th>E.ID</th>
               <th>Employee Name</th>
@@ -27,7 +113,17 @@
               <th>Employee Contact</th>
               <th>Employee Salary</th>
             </tr>
+            <% emp.forEach(function(e) { %>
+              <tr>    
+                <td><%= e.eid %></td>
+                <td><%=e.ename %></td> 
+                <td><%=e.eadd %></td>
+                <td><%=e.scontact %></td>
+                <td><%=e.salary %></td>
+                <td><button onclick="window.location.href='/editEmpF?category=<%= e.eid %>'" style="width :70px;"> Edit</button></td>
+                <td><button onclick="window.location.href='/delEmp?category=<%= e.eid %>'" style="width :90px;"> Delete</button></td>
+              </tr>
+              <% }); %>
           </table>
-        </div>        
 </body>
 </html>
