@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INVENTORY</title>
+     <!--  <link rel="stylesheet" href="forms.css">--> 
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style>      
+        body{   background-color: rgb(253, 255, 148)  } 
+        a{  color:white;  text-decoration: none;      } 
+    </style>
+    </head>
+    <body>
+                <ul>             
+                <li style="float:right" onclick="window.location.href='/homepg'"><a style="color:red">Home</a></li>
+                <li style="float:right"><a style="padding: 5px 5px;">
+                    <form action="/searchProduct" method="POST" >
+                     <select name="attribute" style="height: 30px;">
+                     <option value="pid">pid</option>
+                     <option value="pname">name</option>
+                     <option value="qty">Quanity ></option>
+                     <option value="cost">Cost ></option>
+                     <option value="Mprice">Market Price ></option>
+                     <option value="category">Category</option>
+
+                      </select>  
+                    <input type="search" style="height:40px; " name="check"></form></a></li>
+                <li style="float:right; text-align: center; color:white; padding: 14px;">Search Product :</li>
+                <li style="float:left"><b>INIVENTORY</b></li>
+               </ul>
+            <br><hr><br>
+            <div>
+                <table>
+                <tr>
+                <th>P.ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Market price</th>
+              
+                <th>Category</th>
+                 </tr>
+                 <% products.forEach(function(product) { %>
+                    <tr>
+                            
+                      <td><%= product.pid %></td>
+                      <td><%=product.pname %></td> 
+                      <td><%=product.qty %></td>
+                  
+                      <td><%=product.sprice %></td>
+                      <td><%=product.category %></td>
+                    </tr>
+                    <% }); %>
+                </table>
+          </div>  
+    </body>
+</html>

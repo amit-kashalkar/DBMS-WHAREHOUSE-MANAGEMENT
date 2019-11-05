@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STOCK  DETAILS</title>
+        <link rel="stylesheet" href="forms.css">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style>      
+        body{
+            background-color: rgb(253, 255, 148)
+        } 
+        a{
+            color:white;
+            text-decoration: none;
+        } 
+    </style>
+    </head>
+    <body>
+                <ul>             
+                <li style="float:right"><a href="#new">New Entry</a></li>
+                <li style="float:right"><a href="product_Payment.html">Payment Due</a></li>
+                <li style="float:left"><b>Product DETAILS</b></li>
+               </ul>
+            <form action=" " method="post" id="new">
+              <h2>NEW ENTRY</h2>
+              <div class="container"> 
+                    <span> <label for="sname"><b>Product id: </b></label>
+                        <input type="text" placeholder="Product id" name="sname" required><br>
+                     </span>  
+               <span> <label for="sname"><b>Product Name : </b></label>
+                <input type="text" placeholder="Product Name" name="sname" required><br>
+              </span>
+              <span> 
+                <label for="aadd"><b>Price :   </b></label>
+                <input type="text" placeholder="SalePrice" name="sadd" required><br>
+              </span>
+              <span> 
+                    <label for="aadd"><b>Qty :   </b></label>
+                    <input type="text" placeholder="Quantity" name="sadd" required><br>
+                  </span>
+              <span> 
+                <label for="uname"><b>Cost :</b></label>
+                <input type="text" placeholder="Cost" name="uname" required><br>
+              </span>
+              <span> 
+                <label for="psw"><b>Category  :</b></label>
+                <input type="number" placeholder="Caytegory" name="psw" required> <br>
+              </span>
+              <span> 
+                    <label for="psw"><b>Supplier id :</b></label>
+                    <input type="number" placeholder="Id of the Product Supplier" name="psw" required>
+                  </span>
+              <span> 
+                <button type="submit" ><a href='supply_bill.html'>ADD</a></button>
+              </span>
+              </div>
+            </form>       
+    </body>
+</html>

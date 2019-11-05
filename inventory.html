@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INVENTORY</title>
+        <link rel="stylesheet" href="forms.css">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style>      
+        body{   background-color: rgb(253, 255, 148)  } 
+        a{  color:white;  text-decoration: none;      } 
+    </style>
+    </head>
+    <body>
+                <ul>             
+                <li style="float:right"><a href="#new"></a></li>
+                <li style="float:right"><a href="product_Payment.html"></a></li>
+                <li style="float:left"><b>INIVENTORY</b></li>
+               </ul>
+            <br><hr><br>
+            <div>
+                <table>
+               <thead>
+                <tr>
+                <th>P.ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>sale price</th>
+           
+                <th>Category</th>
+                 </tr>
+             </thead>
+                 <tbody>
+                  <% products.forEach(function(pris) { %>
+                <tr>
+                    
+                  <td><%= pris.pid %>  </td>
+                  <td><%=pris.pname %></td> 
+                  <td><%=pris.pqty %></td>
+                  <td><%=pris.sprice %></td>
+                <td><%=pris.category %></td>
+               
+
+                                  
+                                </tr>
+                <% }); %>
+               </tbody>
+                </table>
+          </div>  
+    </body>
+</html>

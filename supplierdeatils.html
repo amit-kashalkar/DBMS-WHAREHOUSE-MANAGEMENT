@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STATS-Profit</title>
+        <link rel="stylesheet" href="../forms.css">
+        <link rel="stylesheet" href="../table.css">
+        <link rel="stylesheet" href="../navig.css">
+        <style>
+        body{   background-color: rgb(253, 255, 148)      }
+    </style>
+    </head>
+    <body>
+            <ul>        
+              <li style="float:right; " onclick="window.location.href='/homepg'"><a style="color:red">home</a></li>              
+              <li style="float:right" onclick="window.location.href='/sales'"><a >Sales</a></li>
+                <li style="float:right" onclick="window.location.href='/customer'"><a >Customer</a></li>
+                <li style="float:right" onclick="window.location.href='/rouEmployees'"><a >Employees</a></li>
+                <li style="float:right" onclick="window.location.href='/rouStats'"><a >Income</a></li>
+                <li style="float:left" ><b>Suppliers</b></li>
+            </ul>
+            <br><hr><br>
+            <div><table>
+                <tr>
+                  <th>s.ID</th>
+                  <th>Supplier Name</th>
+                  <th>Supplier Address</th>
+                  <th>Supplier Contact</th>
+                  <th>Product</th>
+                  <th>Supply details</th>
+                </tr>
+                <% sup.forEach(function(supp) { %>
+                  <tr>        
+                    <td><%= supp.sid %></td>
+                    <td><%=supp.sname %></td> 
+                    <td><%=supp.sadd %></td>
+                    <td><%=supp.scontact %></td>
+                    <td><button onclick="window.location.href='/product?category=<%= supp.sid %>'"> Details</button></td>
+                    <td><button onclick="window.location.href='/supplyDetails?category=<%= supp.sid %>'"> Details</button></td>
+                  </tr>
+                  <% }); %>
+              </table>
+            </div>
+</body>
+</html>

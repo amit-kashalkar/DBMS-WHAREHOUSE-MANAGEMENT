@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SUPPLIER-IN</title>
+        <link rel="stylesheet" href="forms.css">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style>
+        body{   background-color: rgb(253, 255, 148)      }
+    </style>
+    </head>
+    <body>
+            <ul>             
+                <li style="float:right"><a href="#new">New Entry/Update</a></li>
+                <li style="float:right"><a href="product_Payment.html">Payment Due</a></li>
+                <li style="float:left"><b>SUPPLIER IN</b></li>
+            </ul>
+            <br><hr><br>
+            <div><table>
+              <tr>
+                <th>s.ID</th>
+                <th>Supplier Name</th>
+                <th>Supplier Address</th>
+                <th>Supplier Contact</th>
+                <th>Product</th>
+              </tr>
+            </table>
+          </div>
+          
+          
+            <form action=" " method="post" id="new">
+              <h2>NEW ENTRY</h2>
+              <div class="container"> 
+               <span> <label><b>Supplier Name : </b></label>
+                <input type="text" placeholder="Supplier Name" name="sname" required><br>
+              </span>
+              <span> 
+                <label ><b>Address :   </b></label>
+                <input type="text" placeholder="Address " name="sadd" required><br>
+              </span>
+              <span> 
+                <label ><b>Contact No :</b></label>
+                <input type="text" placeholder="Contact No" name="uname" required><br>
+              </span>
+              <span> 
+                <label ><b>Product Id  :</b></label>
+                <input type="number" placeholder="Product Id of the product supplied" name="pid" required>
+              </span>
+              <span> 
+                <button type="submit" >ADD</button>
+              </span>
+              </div>
+            </form>
+       
+
+            
+    </body>
+</html>

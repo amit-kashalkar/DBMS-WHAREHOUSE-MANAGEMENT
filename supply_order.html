@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ORDER DETAILS</title>
+        <link rel="stylesheet" href="forms.css">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style> 
+        body{
+            background-color: rgb(253, 255, 148)
+        }
+        input[type=text]{
+          width:20%;
+        }
+        button{
+          HEIGHT: 35px;
+          padding:14px 2px; 
+        }
+        span{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center
+        }
+    </style>
+    </head>
+    <body>
+            <ul>             
+              <li style="float:left"><b>ORDER DETAILS</b></li>
+            </ul>
+
+            <br><hr>
+            <div>
+                </div> 
+            <br><hr><br>
+                <form action="/supplyorderdata" method="post" >
+                   <input type="text" name="pid" value="<%=pid%>">
+                   <input type="text" name="qty" placeholder="Quantity">
+                    <input type="text" name="oid" value="<%=oid%>" > 
+                   <input type="text" name="sid" value="<%=sid%>" >
+  <button type="submit" class="btn">Submit</button>
+                </form> 
+                        <br><br>
+           
+            </table>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th>PID</th>
+                  <th>OID</th>
+                  <th>QUANTITY</th>
+                  <th>PRICE</th>
+                  <th>TPRICE</th>
+                
+                </tr>
+                </thead>
+        
+               </table>
+          </div>       
+           
+</body>
+</html>

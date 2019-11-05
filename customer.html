@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+<title>CUSTOMER DETAILS</title>
+<link rel="stylesheet" href="forms.css">
+<link rel="stylesheet" href="navig.css">
+<style> 
+body{     background-color: rgb(253, 255, 148)        }
+h2{   width:60px;   }
+form{ margin-top: 3%;  margin-left: 5%;}
+</style>
+</head><body>
+<ul>             
+<li style="float:left"><b>CUSTOMER DETAILS</b></li>
+</ul>
+<br><hr><br>
+<!--
+<div>          
+<form action="addCust" method="post" >
+<h2>CUSTOMER DETAILS</h2>
+<div class="
+container"> 
+<span> 
+<label><b>Customer id: </b></label>
+ <input type="text" placeholder="Customer id" name="sname" required><br>
+</span> 
+<span>
+   <label ><b>Customer Name : </b></label>
+   <input type="text" placeholder="Customer Name" name="cname" required><br>
+</span>
+<span> 
+  <label ><b>Address :</b></label>
+  <input type="text" placeholder="Customer Address" name="cadd" required><br>
+</span>
+<span> 
+  <label ><b>Contact No :</b></label>
+  <input type="text" placeholder="Customer Contact No" name="ccont" required><br>
+</span> 
+   <button type="submit">ADD</button>
+</div>
+</form> 
+-->   
+<form action="/addCust" method="post" >
+	<input type="text" name="cname" placeholder="Customer name">
+				<input type="text" name="cadd" placeholder="Customer Address">
+				<input type="number" name="ccont" placeholder="Customer contact">
+				<input type="submit" value="ENTER">
+	        <!--
+				<button onclick="window.location.href='/rouOrder'">proceed</button>
+		    -->		
+</form>  
+				
+</html> 

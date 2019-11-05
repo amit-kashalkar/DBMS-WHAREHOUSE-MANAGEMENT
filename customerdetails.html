@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head>
+<title>CUSTOMER DETAILS</title>
+<link rel="stylesheet" href="../forms.css">
+<link rel="stylesheet" href="../table.css">
+<link rel="stylesheet" href="../navig.css">
+<style> 
+body{     background-color: rgb(253, 255, 148)        }
+h2{   width:60px;   }
+form{ margin-top: 3%;  margin-left: 5%;}
+</style>
+</head><body>
+    <ul>    
+      <li style="float:right; " onclick="window.location.href='/homepg'"><a style="color:red">home</a></li>              
+      <li style="float:right" onclick="window.location.href='/sales'"><a >Sales</a></li>
+        <li style="float:right" onclick="window.location.href='/suppliers'"><a >Suppliers</a></li>
+        <li style="float:right" onclick="window.location.href='/rouEmployees'"><a >Employees</a></li>
+        <li style="float:right" onclick="window.location.href='/rouStats'"><a >Income</a></li>
+        <li style="float:left"><b>Customers</b></li>
+    </ul>
+    <br><hr><br>
+<div><table>
+    <tr>
+      <th>Customer name</th>
+      <th>Customer Address</th>
+      <th>Customer contact</th>
+      <th> total expenditure</th>
+    </tr>
+     </tr>
+                 <% prisoners.forEach(function(customer) { %>
+                    <tr>
+                            
+                      <td><%= customer.cname %></td>
+                      <td><%= customer.cadd %></td> 
+                      <td><%= customer.contact%></td>
+                  
+                      <td><%= customer.eid %></td> 
+                   
+                    </tr>
+                    <% }); %>
+
+  </table></div>
+</body>
+</html> 

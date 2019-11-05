@@ -1,0 +1,41 @@
+.card{
+    background-color: #4CAF50;
+    height: 40px;
+    padding-top:10px;
+   }
+   ul {
+    background-color: #4CAF50;
+    height: 50px;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+writing-mode: horizontal-lr;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+
+li a:hover {
+background-color: rgb(30, 80, 1);
+}
+h3{
+  color: white;
+  text-align: center;
+  font-size: 130%;
+  padding-top: 5px;
+  margin: 0;
+}
+      li b{
+        display: block;
+        color: yellow;
+        font-size: 130%;
+        text-align: center;
+        padding: 14px 16px;
+      }

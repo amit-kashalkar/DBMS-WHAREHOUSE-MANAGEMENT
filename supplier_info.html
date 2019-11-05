@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SUPPLIER</title>
+     <!--  <link rel="stylesheet" href="forms.css">--> 
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="navig.css">
+        <style>      
+        body{   background-color: rgb(253, 255, 148)  } 
+        a{  color:white;  text-decoration: none;      } 
+    </style>
+    </head>
+    <body>
+                <ul>             
+                <li style="float:right" onclick="window.location.href='/homepg'"><a style="color:red">Home</a></li>
+                <li style="float:right"><a style="padding: 5px 5px;">
+                    <form action="/searchSupplier" method="POST" >
+                     <select name="attribute" style="height: 30px;">
+                     <option value="sid">Sid</option>
+                     <option value="sname">name</option>
+                     <option value="scontact">contact ></option>
+                 
+                      </select>  
+                    <input type="search" style="height:40px; " name="check"></form></a></li>
+                <li style="float:right; text-align: center; color:white; padding: 14px;">Search Supllier :</li>
+                <li style="float:left"><b>SUPPLIER</b></li>
+               </ul>
+            <br><hr><br>
+            <div>
+                <table>
+                <tr>
+                <th>S.ID</th>
+                <th>Supplier Name</th>
+                <th>Adress</th>
+                <th>Contact</th>
+              
+                
+                 </tr>
+                 <% supplier.forEach(function(supplier) { %>
+                    <tr>
+                            
+                      <td><%= supplier.sid %></td>
+                      <td><%=supplier.sname %></td> 
+                      <td><%=supplier.sadd %></td>
+                  
+                      <td><%=supplier.scontact %></td> 
+                      <td> <button onclick="window.location.href='/rousupplyorder/?sid=<%= supplier.sid %>' "><h3>ORDER CHECK IN</h3></a></button></td> 
+                    </tr>
+                    <% }); %>
+                </table>
+          </div>  
+    </body>
+</html>9

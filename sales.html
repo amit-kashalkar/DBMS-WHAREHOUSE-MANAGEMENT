@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STATS-Profit</title>
+        <link rel="stylesheet" href="../forms.css">
+        <link rel="stylesheet" href="../table.css">
+        <link rel="stylesheet" href="../navig.css">  <style>
+        body{   background-color: rgb(253, 255, 148)      }
+        button{
+            width:10%;
+            background-color:rgb(153, 250, 157) ;
+            color: #4CAF50;
+        }
+        b{ color:black}
+    </style>
+    </head>
+    <body>
+            <ul> 
+                <li style="float:right; " onclick="window.location.href='/homepg'"><a style="color:red">home</a></li>              
+                <li style="float:right" onclick="window.location.href='/customer'"><a >Customer</a></li>
+                <li style="float:right" onclick="window.location.href='/suppliers'"><a >Suppliers</a></li>
+                <li style="float:right" onclick="window.location.href='/rouEmployees'"><a >Employees</a></li>
+                <li style="float:right" onclick="window.location.href='/rouStats'"><a >Income</a></li>
+                <li style="float:left"><b>Sales</b></li>
+            </ul>
+            <br>
+            <ul style="height: 40px; background-color:rgb(153, 250, 157) ">      
+                <button type="submit"> qty asc </button>  
+                <button type="submit"> qty des </button>   
+                <button type="submit"> profit asc </button>  
+                <button type="submit"> profit des </button>   
+                <li style="float:left"><b style=" color:black">SORT:</b></li>
+            </ul>
+            <br>
+
+            <div><table>
+              <tr>
+                <th>PId</th>
+                <th>PName</th>
+                <th>Qty in stock</th>
+                <th>Qty sold</th>
+                <th>Cost</th>
+                <th>Price</th>
+                <th>Profit</th>
+              </tr>
+            </table></div>
+</body>
+</html> 
