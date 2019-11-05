@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<title>LOG IN</title>
+<link rel="stylesheet" href="public/forms.css">
+<link rel="stylesheet" href="public/navig.css">
+<style>
+body{ background-color: rgb(253, 255, 148) }
+form {  width:300px;   margin-left: 35%;   }
+input[type=text], input[type=password] 
+{  width: 80%;  padding: 12px 20px;}
+button { width: 80%;}
+</style>
+</head>   
+    <body>
+        <div class='card'> <h3>RAJIV WHOLESALE</h3></div>
+        <form action="auth" method="post" >
+          <h2>SIGN IN</h2>
+          <div class="container">          
+            <label ><b>Username</b></label><br>
+            <input type="text" placeholder="Enter Username" name="username" required><br>
+            <label ><b>Password<b></label><br>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+    </body>
+</html>
